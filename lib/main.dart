@@ -213,13 +213,15 @@ class _HomePageState extends State<HomePage>
                         InkWell(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => DetailPage(imgPath: "assets/modelgrid1.jpeg")));
+                                builder: (context) => DetailPage(
+                                    imgPath: "assets/modelgrid1.jpeg")));
                           },
                           child: Hero(
                             tag: "assets/modelgrid1.jpeg",
                             child: Container(
                               height: 200,
-                              width: (MediaQuery.of(context).size.width - 50) / 2,
+                              width:
+                                  (MediaQuery.of(context).size.width - 50) / 2,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 image: const DecorationImage(
@@ -235,30 +237,54 @@ class _HomePageState extends State<HomePage>
                         ),
                         Column(
                           children: [
-                            Container(
-                              height: 95,
-                              width:
-                                  (MediaQuery.of(context).size.width - 100) / 2,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                image: const DecorationImage(
-                                  image: AssetImage("assets/modelgrid2.jpeg"),
-                                  fit: BoxFit.cover,
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => DetailPage(
+                                        imgPath: "assets/modelgrid2.jpeg")));
+                              },
+                              child: Hero(
+                                tag: "assets/modelgrid2.jpeg",
+                                child: Container(
+                                  height: 95,
+                                  width: (MediaQuery.of(context).size.width -
+                                          100) /
+                                      2,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    image: const DecorationImage(
+                                      image:
+                                          AssetImage("assets/modelgrid2.jpeg"),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            Container(
-                              height: 95,
-                              width:
-                                  (MediaQuery.of(context).size.width - 100) / 2,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                image: const DecorationImage(
-                                  image: AssetImage("assets/modelgrid3.jpeg"),
-                                  fit: BoxFit.cover,
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => DetailPage(
+                                        imgPath: "assets/modelgrid3.jpeg")));
+                              },
+                              child: Hero(
+                                tag: "assets/modelgrid3.jpeg",
+                                child: Container(
+                                  height: 95,
+                                  width: (MediaQuery.of(context).size.width -
+                                          100) /
+                                      2,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    image: const DecorationImage(
+                                      image:
+                                          AssetImage("assets/modelgrid3.jpeg"),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
