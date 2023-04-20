@@ -1,3 +1,4 @@
+import 'package:fashion_app_ui_design/detail_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,36 +45,39 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       bottomNavigationBar: Material(
         color: Colors.white,
-        child: TabBar(controller: tabController, indicatorColor: Colors.transparent, tabs: [
-          Tab(
-            icon: Icon(
-              Icons.more,
-              size: 20,
-              color: Colors.black,
-            ),
-          ),
-          Tab(
-            icon: Icon(
-              Icons.play_arrow,
-              size: 20,
-              color: Colors.grey,
-            ),
-          ),
-          Tab(
-            icon: Icon(
-              Icons.navigation,
-              size: 20,
-              color: Colors.grey,
-            ),
-          ),
-          Tab(
-            icon: Icon(
-              Icons.supervised_user_circle,
-              size: 20,
-              color: Colors.grey,
-            ),
-          ),
-        ]),
+        child: TabBar(
+            controller: tabController,
+            indicatorColor: Colors.transparent,
+            tabs: [
+              Tab(
+                icon: Icon(
+                  Icons.more,
+                  size: 20,
+                  color: Colors.black,
+                ),
+              ),
+              Tab(
+                icon: Icon(
+                  Icons.play_arrow,
+                  size: 20,
+                  color: Colors.grey,
+                ),
+              ),
+              Tab(
+                icon: Icon(
+                  Icons.navigation,
+                  size: 20,
+                  color: Colors.grey,
+                ),
+              ),
+              Tab(
+                icon: Icon(
+                  Icons.supervised_user_circle,
+                  size: 20,
+                  color: Colors.grey,
+                ),
+              ),
+            ]),
       ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -206,14 +210,23 @@ class _HomePageState extends State<HomePage>
                     ),
                     Row(
                       children: [
-                        Container(
-                          height: 200,
-                          width: (MediaQuery.of(context).size.width - 50) / 2,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            image: const DecorationImage(
-                              image: AssetImage("assets/modelgrid1.jpeg"),
-                              fit: BoxFit.cover,
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => DetailPage(imgPath: "assets/modelgrid1.jpeg")));
+                          },
+                          child: Hero(
+                            tag: "assets/modelgrid1.jpeg",
+                            child: Container(
+                              height: 200,
+                              width: (MediaQuery.of(context).size.width - 50) / 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                image: const DecorationImage(
+                                  image: AssetImage("assets/modelgrid1.jpeg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
                             ),
                           ),
                         ),
