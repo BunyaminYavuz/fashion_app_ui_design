@@ -23,10 +23,58 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
+  late TabController tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 4, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Material(
+        color: Colors.white,
+        child: TabBar(controller: tabController, indicatorColor: Colors.transparent, tabs: [
+          Tab(
+            icon: Icon(
+              Icons.more,
+              size: 20,
+              color: Colors.black,
+            ),
+          ),
+          Tab(
+            icon: Icon(
+              Icons.play_arrow,
+              size: 20,
+              color: Colors.grey,
+            ),
+          ),
+          Tab(
+            icon: Icon(
+              Icons.navigation,
+              size: 20,
+              color: Colors.grey,
+            ),
+          ),
+          Tab(
+            icon: Icon(
+              Icons.supervised_user_circle,
+              size: 20,
+              color: Colors.grey,
+            ),
+          ),
+        ]),
+      ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
