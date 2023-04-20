@@ -83,7 +83,244 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           // Card
-          
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Material(
+              borderRadius: BorderRadius.circular(16),
+              //color: Colors.indigo.shade300,
+              elevation: 4,
+              child: Container(
+                width: double.infinity,
+                height: 500,
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: const DecorationImage(
+                              image: AssetImage("assets/model1.jpeg"),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width - 160,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                "Daisy",
+                                style: TextStyle(
+                                    fontFamily: "Montserrat",
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "49 mins ago",
+                                style: TextStyle(
+                                    fontFamily: "Montserrat",
+                                    fontSize: 12,
+                                    color: Colors.grey),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(
+                          Icons.more_vert,
+                          size: 22,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const Text(
+                      "This official website features a ribbed knit zipper jacket that is"
+                      " modern and stylish. It looks very temparement and is recommend to friends.",
+                      style: TextStyle(
+                          fontFamily: "Montserrat",
+                          fontSize: 14,
+                          color: Colors.grey),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 200,
+                          width: (MediaQuery.of(context).size.width - 50) / 2,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            image: const DecorationImage(
+                              image: AssetImage("assets/modelgrid1.jpeg"),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              height: 95,
+                              width:
+                                  (MediaQuery.of(context).size.width - 100) / 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                image: const DecorationImage(
+                                  image: AssetImage("assets/modelgrid2.jpeg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              height: 95,
+                              width:
+                                  (MediaQuery.of(context).size.width - 100) / 2,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                image: const DecorationImage(
+                                  image: AssetImage("assets/modelgrid3.jpeg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 25,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Colors.brown.withOpacity(0.2),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              " # Louis vuitton",
+                              style: TextStyle(
+                                  fontFamily: "Montserrat",
+                                  fontSize: 12,
+                                  color: Colors.brown),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Container(
+                          width: 100,
+                          height: 25,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Colors.brown.withOpacity(0.2),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              " # Chloe",
+                              style: TextStyle(
+                                  fontFamily: "Montserrat",
+                                  fontSize: 12,
+                                  color: Colors.brown),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Divider(),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.reply,
+                          size: 32,
+                          color: Colors.brown.withOpacity(0.2),
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "1.4k",
+                          style: TextStyle(
+                              fontFamily: "Montserrat",
+                              fontSize: 16,
+                              color: Colors.brown.withOpacity(0.4)),
+                        ),
+                        const SizedBox(
+                          width: 40,
+                        ),
+                        Icon(
+                          Icons.comment_outlined,
+                          size: 32,
+                          color: Colors.brown.withOpacity(0.2),
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "280",
+                          style: TextStyle(
+                              fontFamily: "Montserrat",
+                              fontSize: 16,
+                              color: Colors.brown.withOpacity(0.4)),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width - 250,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              const Icon(
+                                Icons.favorite,
+                                size: 32,
+                                color: Colors.red,
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "2.5k",
+                                style: TextStyle(
+                                    fontFamily: "Montserrat",
+                                    fontSize: 16,
+                                    color: Colors.brown.withOpacity(0.4)),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
