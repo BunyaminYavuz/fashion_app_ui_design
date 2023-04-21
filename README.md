@@ -1,5 +1,6 @@
 # fashion_app_ui_design
                                                                                                                     
+<div align="center">
 <hr>
 <h3>I made the structure that can be scrolled horizontally, showing the recommended users to follow.</h3>
 <img src="fashion_ui_readme_images/scrollUserList.png" alt="State 1" style="height: 500px; width:300px;"/>
@@ -18,6 +19,7 @@ I applied the animation(Hero) that will be applied when clicking on the pictures
 <h3>Last view of the detail page.</h3>
 <img src="fashion_ui_readme_images/detailPageVersion2.png" alt="State 5" style="height: 500px; width:300px;"/>
 <hr>
+</div>
 
 ## Getting Started
 
